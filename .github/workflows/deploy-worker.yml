@@ -76,7 +76,7 @@ jobs:
           KV_NAMESPACE_ID: ${{ secrets.KV_NAMESPACE_ID }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           WORKER_VARS: ${{ secrets.WORKER_VARS }}
-          WRANGLER_CONFIG: ${{ secrets.WRANGLER_CONFIG }}
+          WRANGLER_CONFIG: ${{ vars.WRANGLER_CONFIG }}
           EXPIRY_CLEANUP_CRON: ${{ secrets.EXPIRY_CLEANUP_CRON }}
         run: node deploy/worker/generate-toml.js
 
